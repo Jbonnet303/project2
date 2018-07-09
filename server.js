@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
 
-app.get('/bars/seed', (request, response) => {
+app.get('/bars/shop/seed', (request, response) => {
   Bar.create (
     [
       {
@@ -64,7 +64,7 @@ app.get('/bars/seed', (request, response) => {
       }
   ],
     (error, data) => {
-      response.redirect('/bars');
+      response.redirect('/bars/shop');
       }
     )
   });
@@ -79,20 +79,29 @@ app.get('/bars/seed', (request, response) => {
 
 // Index Route
 app.get('/bars', (request, response) => {
-  Bar.find({}, (error, allBars) => {
-  response.render('index.ejs', {
+Bar.find({}, (error, allBars) => {
+response.render('index.ejs', {
   bars: allBars
     });
   });
 });
 
 
-// Create Route
-app.post('/bars', (request, response) => {
-  Bar.create(request.body, (error, createdBar) => {
-    response.redirect('/bars');
-  })
+// New Route
+app.get('/bars/shop', (request, response) => {
+  Bar.find({}, (error, allBars) => {
+  response.render('shop.ejs', {
+  bars: allBars
+    });
+  });
 });
+
+// // Create Route
+// app.post('/bars/shop', (request, response) => {
+//   Bar.create(request.body, (error, createdBar) => {
+//     response.redirect('/bars');
+//   })
+// });
 
 
 app.listen(PORT, () => {

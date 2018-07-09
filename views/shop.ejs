@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Helloo!!!!!</h1>
+
+    <!-- <div class="flex-container2"> -->
+
+
+
+
+<div class="container">
+
+<% for(let i = 0; i < bars.length; i++){ %>
+
+        <a href="/bars/shop/<%=bars[i].id%>"</a><br/>
+          <img src="<%=bars[i].img%>"><br/>
+          <%=bars[i].name; %><br/>
+         Description: <%=bars[i].description; %><br/>
+         Price: $<%=bars[i].price; %><br/>
+         Quantity: <%=bars[i].qty; %><br/>
+
+<form action="/bars/<%=bars[i].id%>?_method=DELETE" method="POST">
+
+                <input type="submit" value="DELETE" /><br/>
+
+              </form>
+
+              <a href="/bars/<%=bars[i].id; %>/edit"><button>Edit Bars</button></a>
+
+                <% } %>
+
+      </div>
+
+
+
+    </div>
+
+  </body>
+</html>
