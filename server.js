@@ -77,7 +77,7 @@ app.get('/bars/shop/seed', (request, response) => {
 // });
 
 
-// Index Route
+// Index Route Home Page
 app.get('/bars', (request, response) => {
 Bar.find({}, (error, allBars) => {
 response.render('index.ejs', {
@@ -87,7 +87,7 @@ response.render('index.ejs', {
 });
 
 
-// New Route
+// New Route Shop Page
 app.get('/bars/shop', (request, response) => {
   Bar.find({}, (error, allBars) => {
   response.render('shop.ejs', {
@@ -95,6 +95,17 @@ app.get('/bars/shop', (request, response) => {
     });
   });
 });
+
+
+// New Route Specialtiy Drink Page
+app.get('/bars/drink', (request, response) => {
+  Bar.find({}, (error, allBars) => {
+  response.render('drink.ejs', {
+  bars: allBars
+    });
+  });
+});
+
 
 // // Create Route
 // app.post('/bars/shop', (request, response) => {
