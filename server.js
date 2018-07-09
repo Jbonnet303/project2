@@ -87,7 +87,7 @@ response.render('index.ejs', {
 });
 
 
-// New Route Shop Page
+// Route Shop Page
 app.get('/bars/shop', (request, response) => {
   Bar.find({}, (error, allBars) => {
   response.render('shop.ejs', {
@@ -97,10 +97,20 @@ app.get('/bars/shop', (request, response) => {
 });
 
 
-// New Route Specialtiy Drink Page
+// Route Specialtiy Drink Page
 app.get('/bars/drink', (request, response) => {
   Bar.find({}, (error, allBars) => {
   response.render('drink.ejs', {
+  bars: allBars
+    });
+  });
+});
+
+
+// Route Locations Page
+app.get('/bars/location', (request, response) => {
+  Bar.find({}, (error, allBars) => {
+  response.render('location.ejs', {
   bars: allBars
     });
   });
