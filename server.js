@@ -72,9 +72,9 @@ app.get('/bars/seed', (request, response) => {
 
 
 
-app.get('/bars', (request, response) => {
-  response.send('this works');
-});
+// app.get('/bars', (request, response) => {
+//   response.send('this works');
+// });
 
 
 // Index Route
