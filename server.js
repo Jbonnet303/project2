@@ -72,7 +72,7 @@ app.get('/bars/seed', (request, response) => {
 
 
 
-app.get('/', (request, response) => {
+app.get('/bars', (request, response) => {
   response.send('this works');
 });
 
