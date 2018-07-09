@@ -72,9 +72,9 @@ app.get('/bars/shop/seed', (request, response) => {
 
 
 
-// app.get('/bars', (request, response) => {
-//   response.send('this works');
-// });
+app.get('/', (request, response) => {
+  response.send('this works');
+});
 
 
 // Index Route Home Page
