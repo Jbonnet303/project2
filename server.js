@@ -118,14 +118,11 @@ app.get('/bars/location', (request, response) => {
 
 
 // // Create Route
-app.post('/bars/shop/new', (request, response) => {
-  response.render('new.ejs');
+app.get('/bars/shop/new', (request, response) => {
+response.render('new.ejs');
 });
 
-//   Bar.create(request.body, (error, createdBar) => {
-//     response.redirect('/bars/shop');
-//   })
-// });
+
 
 
 //Edit Route
