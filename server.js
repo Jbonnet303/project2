@@ -161,16 +161,14 @@ app.get('/bars/shop/:id', (request, response) => {
 
 
 // Buy
-app.post('/bars/shop/:id/buy', (request, response)=>{
-  Bar.update({_id: request.params.id}, {$inc:{quantity: -1}}, (error, foundBar) => {
-    response.redirect('/bars/shop/' + request.params.id)
-  })
-});
-
 app.put('/bars/shop/:id/buy', (request, response) => {
-  Bar.findByIdAndUpdate(request.params.id, request.body, {new:true}, (error, updateModel) => {
-    response.redirect('/bars/shop/:id');
-  });
+Bar.findByIdAndUpdate(request.params.id, {$inc:{quantity: -1}}, (error) => {
+  if (error) {
+    response.send(error.message)
+  } else {
+    response.redirect('back')
+  }
+});
 });
 
 
