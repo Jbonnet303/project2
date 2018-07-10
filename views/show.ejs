@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>PRODUCT DETAILS</h1>
+
+    <div class='container'>
+
+      <% if (bar.qty <= 0) { %>
+            <h4 class="out-of-stock"> OUT OF STOCK </h4>
+          <% } else   { %>
+
+            <form action='/bars/shop/<%=bar.id%>/buy?_method=PUT' method='POST'> <button>Buy</button></form>
+
+              <% } %>
+
+
+      <a href="/bars/<%=bar.id%>"</a><br/>
+      <img src="<%=bar.img%>"><br/>
+     Name: <%=bar.name; %><br/>
+     Description: <%=bar.description; %><br/>
+     Price: $<%=bar.price; %><br/>
+     Quantity: <%=bar.qty; %><br/>
+
+
+
+    <nav>
+    <a href="/bars/shop"><button>Back</button></a>
+    </nav>
+
+    <a href="/bars/<%=bar.id; %>/edit"><button>Edit Product</button></a>
+
+
+
+  </div>
+
+  </body>
+</html>

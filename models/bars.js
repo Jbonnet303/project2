@@ -5,7 +5,7 @@ const barSchema = new mongoose.Schema({
     description: String,
     img: String,
     price: {type: Number, min: 0},
-    qty: {type: Number, min: 0}
+    quantity: {type: Number, min: 0}
   });
 
 

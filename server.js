@@ -24,43 +24,43 @@ app.get('/bars/shop/seed', (request, response) => {
         description: 'Magical Beans',
         img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
         price: 1000,
-        qty: 100
+        quantity: 100
       }, {
         name: 'Bones',
         description: 'Bag Of Bones',
         img: 'http://bluelips.com/prod_images_large/bones1.jpg',
         price: 50,
-        qty: 150
+        quantity: 150
       }, {
         name: 'Bins',
         description: 'Stack Of Bins',
         img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
         price: 15,
-        qty: 200
+        quantity: 200
       }, {
         name: 'Buttons',
         description: 'Box Of Buttons',
         img: 'http://quanonline.com/military/military_reference/american/wwi_uniforms/data/army_tunic_button_wwi.jpg',
         price: 3,
-        qty: 250
+        quantity: 250
       } ,{
         name: 'Bubbles',
         description: 'Bubbles Blowing Bubbles',
         img: 'https://i.pinimg.com/originals/aa/21/cd/aa21cd3f11a5ad71681e35814a03a6b9.jpg',
         price: 7,
-        qty: 80
+        quantity: 80
       } ,{
         name: 'Boa',
         description: 'Big Boa Constrictor',
         img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Boa_constrictor_constrictor_guyana.JPG/220px-Boa_constrictor_constrictor_guyana.JPG',
         price: 500,
-        qty: 120
+        quantity: 120
       } ,{
         name: 'Balls',
         description: 'Multi Color Balls',
         img: 'https://www.partybagsrus.co.uk/ekmps/shops/partybags1/images/bouncing-bouncy-ball-jet-party-bag-toys-fillers-27mm-1480-p.jpg',
         price: 4,
-        qty: 6000
+        quantity: 6000
       }
   ],
     (error, data) => {
@@ -72,9 +72,9 @@ app.get('/bars/shop/seed', (request, response) => {
 
 
 
-// app.get('/', (request, response) => {
-//   response.send('this works');
-// });
+app.get('/', (request, response) => {
+  response.send('this works');
+});
 
 
 // Index Route Home Page
@@ -118,11 +118,63 @@ app.get('/bars/location', (request, response) => {
 
 
 // // Create Route
-// app.post('/bars/shop', (request, response) => {
+app.post('/bars/shop/new', (request, response) => {
+  response.render('new.ejs');
+});
+
 //   Bar.create(request.body, (error, createdBar) => {
-//     response.redirect('/bars');
+//     response.redirect('/bars/shop');
 //   })
 // });
+
+
+//Edit Route
+app.get('/bars/:id/edit', (request, response) => {
+  Bar.findById(request.params.id, (error, foundBar) => {
+    response.render('edit.ejs', {
+        bar: foundBar
+    });
+  });
+});
+
+app.put('/bars/shop/:id', (request, response) => {
+  Bar.findByIdAndUpdate(request.params.id, request.body, {new:true}, (error, updateModel) => {
+    response.redirect('/bars/shop');
+  });
+});
+
+
+
+// Show Route
+app.get('/bars/shop/:id', (request, response) => {
+  Bar.findById(request.params.id, (error, foundBar) => {
+  response.render('show.ejs', {
+    bar: foundBar
+  });
+  })
+});
+
+
+// Buy
+app.post('/bars/shop/:id/buy', (request, response)=>{
+  Bar.update({_id: request.params.id}, {$inc:{quantity: -1}}, (error, foundBar) => {
+    response.redirect('/bars/shop/' + request.params.id)
+  })
+});
+
+app.put('/bars/shop/:id/buy', (request, response) => {
+  Bar.findByIdAndUpdate(request.params.id, request.body, {new:true}, (error, updateModel) => {
+    response.redirect('/bars/shop/:id');
+  });
+});
+
+
+// Delete Route
+app.delete('/bars/:id', (request, response) => {
+  Bar.findByIdAndRemove(request.params.id, (error, deletedBar) => {
+    response.redirect('/bars/shop');
+  })
+});
 
 
 app.listen(PORT, () => {

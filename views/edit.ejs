@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Helllooo Edit!</h1>
+
+
+    <div class='container'>
+
+    <form action="/bars/shop/<%=bar.id%>?_method=PUT" method="POST">
+      <img src="<%=bar.img %>"</a><br/>
+    Name: <input type="text" name="name" value="<%=bar.name%>"><br/>
+    Description: <input type="text" name="description" value="<%=bar.description%>"><br/>
+    Price: <input type="number" name="price" value="<%=bar.price%>"><br/>
+    Inventory: <input type="number" name="qty" value="<%=bar.qty%>"><br/>
+
+
+    <input type="submit" name="" value="Submit Changes" /><br/>
+
+
+
+        </form>
+
+        <nav>
+        <a href="/bars/shop"><button>Back</button></a>
+        </nav>
+
+      </div>
+
+
+
+  </body>
+</html>

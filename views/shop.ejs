@@ -14,6 +14,13 @@
       background-size: cover;
     }
 
+    .flex-container2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
 
 
     </style>
@@ -23,12 +30,11 @@
 
     <h1>Helloo!!!!!</h1>
 
-    <!-- <div class="flex-container2"> -->
 
 
 
 
-<div class="container">
+<div class="flex-container2">
 
 <% for(let i = 0; i < bars.length; i++){ %>
 
@@ -37,7 +43,7 @@
           <%=bars[i].name; %><br/>
          Description: <%=bars[i].description; %><br/>
          Price: $<%=bars[i].price; %><br/>
-         Quantity: <%=bars[i].qty; %><br/>
+         Quantity: <%=bars[i].quantity; %><br/>
 
 <form action="/bars/<%=bars[i].id%>?_method=DELETE" method="POST">
 
@@ -45,7 +51,7 @@
 
               </form>
 
-              <a href="/bars/<%=bars[i].id; %>/edit"><button>Edit Bars</button></a>
+              <!-- <a href="/bars/<%=bars[i].id; %>/edit"><button>Edit Bars</button></a> -->
 
                 <% } %>
 
@@ -54,6 +60,14 @@
 
 
     </div>
+
+    <nav>
+    <a href="/bars"><button>Back</button></a>
+    </nav>
+
+    <nav>
+    <a href="/bars/shop/new"><button>Create New Product</button></a>
+    </nav>
 
   </body>
 </html>
