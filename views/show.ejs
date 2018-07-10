@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="/main.css">
     <meta charset="utf-8">
     <title></title>
+
+    <style>
+
+
+    </style>
   </head>
   <body>
 
@@ -10,7 +16,7 @@
 
     <div class='container'>
 
-      <% if (bar.qty <= 0) { %>
+      <% if (bar.quantity <= 0) { %>
             <h4 class="out-of-stock"> OUT OF STOCK </h4>
           <% } else   { %>
 
@@ -24,7 +30,7 @@
      Name: <%=bar.name; %><br/>
      Description: <%=bar.description; %><br/>
      Price: $<%=bar.price; %><br/>
-     Quantity: <%=bar.qty; %><br/>
+     Quantity: <%=bar.quantity; %><br/>
 
 
 

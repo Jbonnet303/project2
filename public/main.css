@@ -10,10 +10,16 @@ h1 {
 
 a {
   text-decoration: none;
+  color: black;
+  }
+
+
+  .container {
+    text-align: center;
   }
 
 a:hover {
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 /* html {
@@ -100,7 +106,7 @@ a:hover {
   background-color: transparent;
   border: none;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 30px;
   color: black;
 }
 
