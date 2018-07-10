@@ -117,9 +117,16 @@ app.get('/bars/location', (request, response) => {
 });
 
 
-// // Create Route
+// Create Route
 app.get('/bars/shop/new', (request, response) => {
 response.render('new.ejs');
+});
+
+//Post New Product Route
+app.post('/bars/shop', (request, response) => {
+  Bar.create(request.body, (error, createdBar) => {
+    response.redirect('/bars/shop');
+  })
 });
 
 
@@ -134,6 +141,7 @@ app.get('/bars/:id/edit', (request, response) => {
   });
 });
 
+//New edited Information Route
 app.put('/bars/shop/:id', (request, response) => {
   Bar.findByIdAndUpdate(request.params.id, request.body, {new:true}, (error, updateModel) => {
     response.redirect('/bars/shop');
