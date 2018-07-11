@@ -61,6 +61,48 @@ app.get('/bars/shop/seed', (request, response) => {
         img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/447494/1669799.jpg',
         price: 8,
         quantity: 600
+      } ,{
+        name: 'Pour Bottle Kit',
+        description: 'This 1 qt. white pour bottle kit with assorted spouts and caps will help you serve and store salad dressings, juices, and simple syrups with ease!',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/large/204139/957575.jpg',
+        price: 11,
+        quantity: 100
+      }, {
+        name: 'Liquor Pourer',
+        description: 'Serving as the perfect bar accessory, this four-pronged stainless steel strainer allows you to drain cocktails and other assorted beverages through a glass or shaker of ice.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/235516/1271798.jpg',
+        price: 1,
+        quantity: 150
+      }, {
+        name: 'Jigger',
+        description: 'On one side, this jigger measures out 0.75 oz. of alcohol or other syrup flavoring, and on the opposite end is a 1.5 oz. jigger.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/main/45838/325495/stainless-steel-jigger-3-4-oz-1-1-2-oz.jpg',
+        price: 15,
+        quantity: 200
+      }, {
+        name: 'Glass Rimmer',
+        description: 'Set up the perfect margarita station with this glass rimmer / margarita salter with 3 compartments!',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/34810/607422.jpg',
+        price: 15,
+        quantity: 250
+      } ,{
+        name: 'Cocktail Stirring Glass',
+        description: 'Captivate your customers with this stunning Libbey 926781 Carats 25.25 oz. cocktail stirring glass! ',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/403942/1486487.jpg',
+        price: 7,
+        quantity: 400
+      } ,{
+        name: 'Wine Decanter Funnel',
+        description: 'This decanter funnel is the accessory you need to complete your wine service. One of the secrets to an excellent glass of wine is proper aeration. ',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/413606/1598659.jpg',
+        price: 16,
+        quantity: 120
+      } ,{
+        name: 'Speed Rail',
+        description: 'The single tier speed rail provides unmistakeable style and will serve as an essential part of any drink-serving application.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/large/178458/464647.jpg',
+        price: 150,
+        quantity: 600
       }
   ],
     (error, data) => {

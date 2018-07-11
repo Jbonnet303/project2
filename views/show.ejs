@@ -7,12 +7,33 @@
 
     <style>
 
+    html {
+      background: url(http://snowreport.co.za/wp-content/uploads/2014/06/hotentots.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
 
     </style>
+
   </head>
   <body>
 
+    <div class="product-detail-buttons">
+
+
+    <a href="/bars/shop"><button class="shop">Shop</button></a>
+
+    <a href="/bars"><button class="home">Home</button></a>
+
+  </div>
+
     <h1>PRODUCT DETAILS</h1>
+
+
+
 
     <div class='container'>
 
@@ -20,7 +41,7 @@
 
       <a href="/bars/<%=bar.id%>"</a><br/>
       <img src="<%=bar.img%>"><br/>
-     Name: <%=bar.name; %><br/>
+     <%=bar.name; %><br/>
      Description: <%=bar.description; %><br/>
      Price: $<%=bar.price; %><br/>
      Quantity: <%=bar.quantity; %><br/>
@@ -46,18 +67,6 @@
 
 
         <a href="/bars/<%=bar.id; %>/edit"><button>Edit Product</button></a>
-
-
-        <nav>
-        <a href="/bars/shop"><button>Back To Shop</button></a>
-        </nav>
-
-
-        <nav>
-        <a href="/bars"><button>Home</button></a>
-        </nav>
-
-
 
 
   </div>
