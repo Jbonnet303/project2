@@ -20,47 +20,47 @@ app.get('/bars/shop/seed', (request, response) => {
   Bar.create (
     [
       {
-        name: 'Beans',
-        description: 'Magical Beans',
-        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        price: 1000,
+        name: 'Steel Bar Shaker',
+        description: 'Featuring a durable stainless steel construction, this bar shaker helps keep your cold cocktails chilled until served!',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/31015/413339.jpg',
+        price: 5,
         quantity: 100
       }, {
-        name: 'Bones',
-        description: 'Bag Of Bones',
-        img: 'http://bluelips.com/prod_images_large/bones1.jpg',
-        price: 50,
+        name: 'Cocktail Bar Strainer',
+        description: 'Serving as the perfect bar accessory, this four-pronged stainless steel strainer allows you to drain cocktails and other assorted beverages through a glass or shaker of ice.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/49370/828059.jpg',
+        price: 3,
         quantity: 150
       }, {
-        name: 'Bins',
-        description: 'Stack Of Bins',
-        img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
+        name: 'Cocktail Kit',
+        description: 'It includes 13 separate pieces, and each piece serves a unique function to help make the drink mixing process faster and easier.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/large/446658/1646130.jpg',
         price: 15,
         quantity: 200
       }, {
-        name: 'Buttons',
-        description: 'Box Of Buttons',
-        img: 'http://quanonline.com/military/military_reference/american/wwi_uniforms/data/army_tunic_button_wwi.jpg',
+        name: 'Lime/Lemon Squeezer',
+        description: 'This squeezer is perfect for juicing your limes and lemons by hand for all your classic cocktails, mixed drinks, and fruit juices!',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/11066/1383638.jpg',
         price: 3,
         quantity: 250
       } ,{
-        name: 'Bubbles',
-        description: 'Bubbles Blowing Bubbles',
-        img: 'https://i.pinimg.com/originals/aa/21/cd/aa21cd3f11a5ad71681e35814a03a6b9.jpg',
+        name: 'Flair Bottles',
+        description: 'Practicing new tricks with glass bottles can be dangerous and expensive. Instead, use this durable practice bottle for a safe way to try new moves behind the bar.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/large/30536/371649.jpg',
         price: 7,
         quantity: 80
       } ,{
-        name: 'Boa',
-        description: 'Big Boa Constrictor',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Boa_constrictor_constrictor_guyana.JPG/220px-Boa_constrictor_constrictor_guyana.JPG',
-        price: 500,
+        name: 'Flat Bottle Opener',
+        description: 'Speed up your bottle service with this black flat bottle opener!',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/95321/515301.jpg',
+        price: 2,
         quantity: 120
       } ,{
-        name: 'Balls',
-        description: 'Multi Color Balls',
-        img: 'https://www.partybagsrus.co.uk/ekmps/shops/partybags1/images/bouncing-bouncy-ball-jet-party-bag-toys-fillers-27mm-1480-p.jpg',
-        price: 4,
-        quantity: 6000
+        name: 'Bar Caddies',
+        description: 'Keep your straws, stirrers, and sugar packets separated for easy selection with this antique copper bar caddy.',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/447494/1669799.jpg',
+        price: 8,
+        quantity: 600
       }
   ],
     (error, data) => {

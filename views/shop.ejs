@@ -15,13 +15,16 @@
       background-size: cover;
     }
 
-    .flex-container2 {
+    .drink-button, .location-button {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      font-family: 'Sorts Mill Goudy', serif;
+      cursor: pointer;
+      background-color: floralwhite;
+      border-radius: 30%;
+      font-weight: 600;
+      font-size: 25px;
+      color: black;
     }
-
 
 
     </style>
@@ -29,38 +32,40 @@
   </head>
   <body>
 
-    <h1>Helloo!!!!!</h1>
+    <div class="flex-container3">
+
+    <a href="/bars"><button class="home">Home</button></a>
+
+    <a href="/bars/shop/new"><button class="create">New Product</button></a>
+
+    <a href="/bars/drink"><button class="drink-button">Speciality Cocktails</button></a>
+
+    <a href="/bars/location"><button class="location-button">Locations</button></a>
 
 
-<div class="flex-container2">
+    </div>
 
-<% for(let i = 0; i < bars.length; i++){ %>
 
-        <a href="/bars/shop/<%=bars[i].id%>"</a><br/>
-          <img src="<%=bars[i].img%>"><br/>
-          <%=bars[i].name; %><br/>
-         Description: <%=bars[i].description; %><br/>
-         Price: $<%=bars[i].price; %><br/>
-         Quantity: <%=bars[i].quantity; %><br/>
 
-<form action="/bars/<%=bars[i].id%>?_method=DELETE" method="POST">
+    <div class="text animated bounce">
+    <h1>Bartender's Paradise</h1>
+    </div>
 
-                <input type="submit" value="DELETE" /><br/>
 
-              </form>
+
+    <div class="flex-container2">
+
+          <% for(let i = 0; i < bars.length; i++){ %>
+
+              <a href="/bars/shop/<%=bars[i].id%>"</a><br/>
+              <img src="<%=bars[i].img%>"><br/>
+              <%=bars[i].name; %><br/>
+      Price: $<%=bars[i].price; %><br/>
+    Quantity: <%=bars[i].quantity; %><br/>
 
                 <% } %>
 
       </div>
-
-
-    <nav>
-    <a href="/bars"><button>Home</button></a>
-    </nav>
-
-    <nav>
-    <a href="/bars/shop/new"><button>Create New Product</button></a>
-    </nav>
 
   </body>
 </html>

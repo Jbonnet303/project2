@@ -16,13 +16,6 @@
 
     <div class='container'>
 
-      <% if (bar.quantity <= 0) { %>
-            <h4 class="out-of-stock"> OUT OF STOCK </h4>
-          <% } else   { %>
-
-            <form action='/bars/shop/<%=bar.id%>/buy?_method=PUT' method='POST'> <button>Buy</button></form>
-
-              <% } %>
 
 
       <a href="/bars/<%=bar.id%>"</a><br/>
@@ -33,17 +26,37 @@
      Quantity: <%=bar.quantity; %><br/>
 
 
+     <% if (bar.quantity <= 0) { %>
+           <h4 class="out-of-stock"> OUT OF STOCK </h4>
+         <% } else   { %>
 
-     <nav>
-     <a href="/bars"><button>Home</button></a>
-     </nav>
 
 
-    <nav>
-    <a href="/bars/shop"><button>Back To Shop</button></a>
-    </nav>
 
-    <a href="/bars/<%=bar.id; %>/edit"><button>Edit Product</button></a>
+           <form action='/bars/shop/<%=bar.id%>/buy?_method=PUT' method='POST'> <button>Buy</button>
+           </form>
+
+
+           <form action="/bars/<%=bar.id%>?_method=DELETE" method="POST">
+               <input type="submit" value="DELETE" /><br/>
+           </form>
+
+             <% } %>
+
+
+
+        <a href="/bars/<%=bar.id; %>/edit"><button>Edit Product</button></a>
+
+
+        <nav>
+        <a href="/bars/shop"><button>Back To Shop</button></a>
+        </nav>
+
+
+        <nav>
+        <a href="/bars"><button>Home</button></a>
+        </nav>
+
 
 
 
