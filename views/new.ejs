@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="/main.css">
     <meta charset="utf-8">
     <title></title>
+
+    <style>
+
+    html {
+      background: url(http://kb4images.com/images/pictures-of-mountains/37385691-pictures-of-mountains.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .new {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 50px;
+    }
+
+
+    </style>
+
   </head>
   <body>
 
-    <h1>New Product Page</h1>
+    <div class="product-detail-buttons">
 
-    <div class='container'>
+    <a href="/bars"><button class="home">Home</button></a>
+
+    <a href="/bars/shop"><button class="shop">Shop</button></a>
+
+    </div>
+
+
+    <h1><div class="text animated bounce">NEW PRODUCT</h1></div>
+
+
+    <div class='container-new'>
 
 <form action='/bars/shop' method='POST'>
 
 
-Name: <input type="text" name="name" /><br/>
-Image: <input type="text" name="img" /><br />
-Description: <input type="text" name="description" /><br/>
-Price: <input type="text" name="price" /><br/>
-Quantity: <input type="text" name="quantity" /><br/>
+Name: <br/> <input type="text" name="name" /><br/>
+Image: <br/> <input type="text" name="img" /><br />
+Description: <br/> <input type="text" name="description" /><br/>
+Price: <br/> <input type="text" name="price" /><br/>
+Quantity: <br/> <input type="text" name="quantity" /><br/>
 
+<div class="new">
 <input type="submit" value="Create Product" />
+</div>
 
 </form>
 
-<nav>
-<a href="/bars/shop"><button>Back</button></a>
-</nav>
-
 </div>
 
+</body>
 
-  </body>
 </html>

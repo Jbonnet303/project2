@@ -23,20 +23,17 @@
 
     <div class="product-detail-buttons">
 
+    <a href="/bars"><button class="home">Home</button></a>
 
     <a href="/bars/shop"><button class="shop">Shop</button></a>
 
-    <a href="/bars"><button class="home">Home</button></a>
 
   </div>
 
     <h1>PRODUCT DETAILS</h1>
 
 
-
-
     <div class='container'>
-
 
 
       <a href="/bars/<%=bar.id%>"</a><br/>
@@ -49,9 +46,7 @@
 
      <% if (bar.quantity <= 0) { %>
            <h4 class="out-of-stock"> OUT OF STOCK </h4>
-         <% } else   { %>
-
-
+         <% } else { %>
 
 
            <form action='/bars/shop/<%=bar.id%>/buy?_method=PUT' method='POST'> <button>Buy</button>

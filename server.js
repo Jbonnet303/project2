@@ -64,7 +64,7 @@ app.get('/bars/shop/seed', (request, response) => {
       } ,{
         name: 'Pour Bottle Kit',
         description: 'This 1 qt. white pour bottle kit with assorted spouts and caps will help you serve and store salad dressings, juices, and simple syrups with ease!',
-        img: 'https://cdnimg.webstaurantstore.com/images/products/large/204139/957575.jpg',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/large/355268/1308019.jpg',
         price: 11,
         quantity: 100
       }, {
