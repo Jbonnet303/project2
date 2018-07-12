@@ -88,7 +88,7 @@ app.get('/bars/shop/seed', (request, response) => {
       } ,{
         name: 'Cocktail Stirring Glass',
         description: 'Captivate your customers with this stunning Libbey 926781 Carats 25.25 oz. cocktail stirring glass! ',
-        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/403942/1486487.jpg',
+        img: 'https://cdnimg.webstaurantstore.com/images/products/extra_large/403847/1629421.jpg',
         price: 7,
         quantity: 400
       } ,{
@@ -110,6 +110,7 @@ app.get('/bars/shop/seed', (request, response) => {
       }
     )
   });
+
 
 
 
