@@ -113,7 +113,6 @@ app.get('/bars/shop/seed', (request, response) => {
 
 
 
-
 app.get('/', (request, response) => {
   response.send('this works');
 });
